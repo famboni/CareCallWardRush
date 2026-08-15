@@ -73,14 +73,16 @@ Run `npm run build` and drop `dist/index.html` onto Netlify, Vercel, Cloudflare 
 
 ## Branding
 
-The Miracle Electronics logo is loaded from `public/brand/` if present, so you can use the official artwork verbatim rather than the built-in vector approximation. Drop **either** of these in and it will be picked up automatically:
+The Miracle Electronics logo appears in exactly one place: on the **plaque across the front of the nurses station desk** inside the ward. It sits on a white sign board, so the original navy-and-cyan artwork is used at its true colours with no reversing or recolouring. There is no Miracle Electronics text or imagery anywhere in the surrounding UI.
+
+To swap in different artwork, replace this file — it is picked up automatically and scaled to fit the plaque:
 
 ```
 public/brand/miracle-electronics.svg   (preferred — scales cleanly)
-public/brand/miracle-electronics.png   (use a transparent-background export)
+public/brand/miracle-electronics.png   (transparent or white background)
 ```
 
-If neither file exists, `src/components/BrandLogo.tsx` falls back to a hand-built SVG of the circuit-triangle mark. Note that the official wordmark is navy `#0A2E4E`, which disappears against the dark game UI — supply a **reversed (white text) export** for best results.
+An identical copy is inlined as a data URI in `src/game/brand.ts`, used as a fallback so the single-file build still renders the plaque when `dist/index.html` is served on its own.
 
 ## Project structure
 
