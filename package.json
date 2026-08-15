@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "clsx": "2.1.1",
+    "express": "^5.2.1",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "tailwind-merge": "3.4.0"
@@ -24,5 +25,18 @@
     "typescript": "5.9.3",
     "vite": "7.3.2",
     "vite-plugin-singlefile": "2.3.0"
-  }
+  },
+  "description": "An arcade nurse-call response game themed around a **CareCall** hospital nurse call system. Patients hit their call buttons, the annunciator lights up, and you sprint the ward to answer every call before the timer runs out.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/famboni/carecallwardrush.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/famboni/carecallwardrush/issues"
+  },
+  "homepage": "https://github.com/famboni/carecallwardrush#readme"
 }
